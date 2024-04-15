@@ -1,0 +1,89 @@
+header{
+    padding: 15px 0;
+    background-color: #136363e8;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1250px;
+    width: 90%;
+}
+
+
+.container .title h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main .container {
+    display: flex;
+    gap: 4rem;
+    height: 100vh;
+    margin: 1rem auto;
+}
+
+.container .add-tesk {
+    box-shadow: 10px 22px 27px 2px #519c89ba;
+    -webkit-box-shadow: 10px 22px 27px 2px #519c89ba;
+    -moz-box-shadow: 10px 22px 27px 2px #519c89ba;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+ }
+
+.container .add-tesk form{
+    display: flex;
+    flex-direction: column;
+    
+}
+.container .add-tesk form label{ 
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.container .add-tesk form input { 
+    margin-bottom: 1rem;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #696964;
+}
+.container .add-tesk form button {
+    border: none;
+    padding: 8px;
+    font-size: 1rem;
+    background: #a0f1d6;
+    cursor: pointer;
+    transition: all ease 1s;
+    color: black;
+ }
+ 
+ .container .add-tesk form button:hover {
+    background-color: #136363e8;
+    color: #ffffff;
+ }
+
+ main .container .list-task {
+    box-shadow: 10px 22px 27px 2px #519c89ba;
+    -webkit-box-shadow: 10px 22px 27px 2px #519c89ba;
+    -moz-box-shadow: 10px 22px 27px 2px #519c89ba;
+    transition: all .5s;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 0 25px;
+    width: 100%;
+}
+    
+.line-on {
+    text-decoration: line-through;
+    transition: all ease 1s;
+}
+    
+
+.list-task ol li p{
+    cursor: pointer;
+}
+
+
