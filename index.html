@@ -32,14 +32,16 @@
             <div class="add-tesk">
                 <form id="formTaks">
                     <label for="NameUser">Nome:</label>
-                    <input type="text" id="NameUser" placeholder="Quem vai fazer a tarefa ?" required>
+                    <input type="text" id="NameUser" placeholder="Quem vai fazer a tarefa ?" maxlength="20">
                     <label for="taskAdd">Adicione sua tarefa:</label>
-                    <input type="text" id="taskAdd" placeholder="Adicione a tarefa aqui" required>
-                    <button type="submit" id="btn-task">Adicionar Tarefa</button>
+                    <input type="text" id="taskAdd" placeholder="Adicione a tarefa aqui" maxlength="40" required>
+                    <button type="submit" id="btn-task" >Adicionar Tarefa</button>
+                    <input type="reset" id="resetButton"  value="Limpar">
                 </form>
             </div>
             <div class="list-task">
-                <ol></ol>
+                <ul>
+                </ul>
             </div>
         </div>
     </main>

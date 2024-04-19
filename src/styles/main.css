@@ -18,8 +18,8 @@ header{
 main .container {
     display: flex;
     gap: 4rem;
-    height: 100vh;
     margin: 1rem auto;
+    height: auto;
 }
 
 .container .add-tesk {
@@ -27,7 +27,6 @@ main .container {
     -webkit-box-shadow: 10px 22px 27px 2px #519c89ba;
     -moz-box-shadow: 10px 22px 27px 2px #519c89ba;
     border: 1px solid black;
-    border-radius: 5px;
     padding: 20px;
  }
 
@@ -50,17 +49,20 @@ main .container {
     font-size: 1rem;
     color: #696964;
 }
-.container .add-tesk form button {
+.container .add-tesk form button,
+#resetButton  {
     border: none;
     padding: 8px;
     font-size: 1rem;
+    border-radius: 5px;
     background: #a0f1d6;
     cursor: pointer;
     transition: all ease 1s;
     color: black;
  }
  
- .container .add-tesk form button:hover {
+ .container .add-tesk form button:hover,
+ #resetButton:hover {
     background-color: #136363e8;
     color: #ffffff;
  }
@@ -71,19 +73,91 @@ main .container {
     -moz-box-shadow: 10px 22px 27px 2px #519c89ba;
     transition: all .5s;
     border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 0 25px;
     width: 100%;
 }
-    
-.line-on {
-    text-decoration: line-through;
-    transition: all ease 1s;
-}
-    
 
-.list-task ol li p{
+    
+.list-task ul li {
+    list-style: none;
+ }
+
+ 
+
+.list-task ul li p{
+    position: relative;
+    word-break: break-all;
+    text-align: start;
+    transition: color 0.4s ease;
     cursor: pointer;
 }
+.list-task ul li p::before{ 
+    content: "";
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transition: transform 0.4s ease;
+    transform: scaleX(0);
+}
+.list-task ul li p.line-on::before{ 
+    transform: scaleX(1);
+} 
+
+.list-task ul li .tasksUser { 
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: #428b73;
+}
+.list-task ul li .tasksUser > input { 
+    color: black;
+}
 
 
+
+.list-task ul button{ 
+    border: none;
+    background-color: #df0303;
+    padding: 8px;
+    border-radius: 5px;
+    height: 30%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#resetButton {
+    margin-top: 1rem;
+}
+
+
+.list-task ul .btn-Editar { 
+    background-color:#136363e8;
+}
+
+.list-task ul li .tasksUser.toggle-background {
+    background-color: #60b174;
+}
+.editUser,
+.editTask {
+    display: none;
+}
+
+.list-task ul li .tasksUser .userConteiner,
+.list-task ul li .tasksUser .tasksContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.list-task ul li .tasksUser .userConteiner >input,
+.list-task ul li .tasksUser .tasksContainer >input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #696964;
+ }
