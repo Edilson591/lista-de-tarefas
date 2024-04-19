@@ -17,6 +17,6 @@ Para remover uma tarefa, clique no botão "Remover" ao lado dela.
 Para limpar a lista, clique no botão "Limpar Lista".
 
 ## Tecnologias Utilizadas
-HTML
-CSS
-JavaScript (jQuery)
+### HTML
+### CSS
+### JavaScript (jQuery)
