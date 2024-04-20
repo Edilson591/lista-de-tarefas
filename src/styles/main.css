@@ -150,6 +150,7 @@ main .container {
 .list-task ul li .tasksUser .tasksContainer{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
     
 }

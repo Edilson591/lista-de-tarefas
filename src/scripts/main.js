@@ -43,11 +43,17 @@ $(document).ready(() => {
     $("#NameUser").focus();
 
     let lineOn = true;
-
+    
     $(".list-task ul li p").each(function (_, e) {
       $(e).click(() => {
-        $(e).toggleClass("line-on", lineOn);
-        lineOn = !lineOn;
+        const removeLine = $(e).closest(".tasksUser").find(".editTask").css('display') === 'none';    
+          if(lineOn && removeLine) {
+            $(e).addClass("line-on");
+            lineOn = !lineOn;
+          }else {
+            $(e).removeClass("line-on");
+            lineOn = true;
+          }
       });
     });
 
@@ -62,17 +68,21 @@ $(document).ready(() => {
       });
     });
 
+ 
+
     $(".btn-Editar").each((_, e) => {
       $(e).on("click", () => {
         const taskUser = $(e).closest(".tasksUser");
         const editUser = taskUser.find(".editUser");
         const editTask = taskUser.find(".editTask");
+        const selectTask = taskUser.find("#selectTask");
         const visible = taskUser.data("visible") === "true";
-
+        
         if (visible) {
           editUser.show().focus();
           editTask.show();
           taskUser.data("visible", "false");
+          $(selectTask).removeClass("line-on");
         } else {
           taskUser.data("visible", "true");
         }
